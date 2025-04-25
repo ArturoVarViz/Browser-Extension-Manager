@@ -1,0 +1,113 @@
+/* Estilos básicos del contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: var(--card-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para los controles */
+.header-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.lang-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* Estilos básicos para botones y select */
+button, select {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    cursor: pointer;
+    border: 1px solid var(--border-light);
+}
+
+/* Lista de extensiones */
+.extension-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-track {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 24px;
+    background-color: var(--button-inactive);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.toggle-indicator {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.toggle__input:checked + .toggle-track {
+    background-color: var(--button-active);
+}
+
+.toggle__input:checked + .toggle-track .toggle-indicator {
+    left: 28px;
+}
+
+.checkMark {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 4px;
+    top: 4px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.toggle__input:checked + .toggle-track .checkMark {
+    opacity: 1;
+}
+
+.checkMark svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--button-active);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Extension Manager</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+        <div class="header-content">
+            <h1>Extensions</h1>
+            <div class="header-controls">
+                <button id="langToggle" class="lang-toggle" aria-label="Toggle language">🌐</button>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </header>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="inactive">Inactive</button>
+    </div>
+    <main class="extension-list" id="extensionList"></main>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#https://github.com/ArturoVarViz">Arturo Vargas Vizoso</a>.
+  </div>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
